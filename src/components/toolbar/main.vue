@@ -1,20 +1,22 @@
 <template>
   <div id="toolbar">
-    <i @click="addOne"></i>
-    <i @click="toggleFavourite"></i>
-    <i @click="deleteNote"></i>
+    <i @click="addNote">add</i>
+    <i @click="toggleFavourite">favourite</i>
+    <i @click="deleteNote">delete</i>
   </div>
 </template>
 <script>
-  import {mapActions, mapState} from 'vuex'
+  import {mapActions} from 'vuex'
   export default {
     methods: {
       ...mapActions([
-
-      ]),
-      addOne () {
-        this.$store
-      }
+        'addNote', 'toggleFavourite', 'deleteNote'
+      ])
     }
   }
 </script>
+<style>
+  #toolbar i{
+    display: block;
+  }
+</style>

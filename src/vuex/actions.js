@@ -18,5 +18,8 @@ export default {
   },
   updateNote ({commit}, note) {
     commit(types.SET_ACTIVE_NOTE, note)
+  },
+  editTitle ({commit}, title) {
+    commit(types.EDIT_TITLE, title)
   }
 }
